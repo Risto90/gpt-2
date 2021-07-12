@@ -5,14 +5,14 @@ Reference:  ["Beginner’s Guide to Retrain GPT-2 (117M) to Generate Custom Text
 To retrain GPT-2 117M model on a custom text dataset:
 
 ```
-PYTHONPATH=src ./train.py --dataset <file|directory|glob>
+./train.py --dataset <file|directory|glob>
 ```
 
 If you want to precompute the dataset's encoding for multiple runs, you can instead use:
 
 ```
-PYTHONPATH=src ./encode.py <file|directory|glob> /path/to/encoded.npz
-PYTHONPATH=src ./train.py --dataset /path/to/encoded.npz
+./encode.py <file|directory|glob> /path/to/encoded.npz
+./train.py --dataset /path/to/encoded.npz
 ```
 
 Make sure `cudnn` is installed. [Some have

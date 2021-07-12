@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # Usage:
-#  PYTHONPATH=src ./encode.py <file|directory|glob> /path/to/output.npz
-#  PYTHONPATH=src ./train --dataset /path/to/output.npz
+#  ./encode.py <file|directory|glob> /path/to/output.npz
+#  ./train --dataset /path/to/output.npz
 
 import argparse
 import numpy as np
-
+import os, sys
+sys.path.append(os.path.join(sys.path[0], 'src'))
 import encoder
 from load_dataset import load_dataset
 
